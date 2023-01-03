@@ -5,7 +5,7 @@
 class Rectangle:
     """this represents a rectangle"""
 
-    def _init_(self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         """Initializing this rectangle class
         Args:
             width: represents the width of the rectangle
@@ -47,17 +47,17 @@ class Rectangle:
 
     def area(self):
         """Returns the area of the rectangle"""
-        return (self._width * self._height)
+        return (self.__width * self.__height)
 
     def perimeter(self):
         """Returns the perimeter of the rectangle"""
-        if self._width == 0 or self._height == 0:
+        if self.__width == 0 or self.__height == 0:
             return (0)
-        return ((self._width * 2) + (self._height * 2))
+        return ((self.__width * 2) + (self.__height * 2))
 
-    def _str_(self) -> str:
+    def __str__(self) -> str:
         """presents a diagram of the rectangle defined for an object"""
-        if self._width == 0 or self._height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ("")
         rectangle = ""
         for column in range(self.__height):
